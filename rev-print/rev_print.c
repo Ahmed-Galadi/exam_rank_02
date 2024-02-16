@@ -6,7 +6,7 @@
 /*   By: agaladi <agaladi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 05:01:20 by agaladi           #+#    #+#             */
-/*   Updated: 2024/02/16 05:42:44 by agaladi          ###   ########.fr       */
+/*   Updated: 2024/02/16 05:45:23 by agaladi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,5 @@ int	main(int argc, char *argv[])
 		write(1, "\n", 1);
 	else
 		ft_putstr(rev_str(argv[1]));
-		
 	return (0);
 }
