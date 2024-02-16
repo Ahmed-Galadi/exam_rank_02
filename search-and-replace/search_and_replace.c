@@ -6,7 +6,7 @@
 /*   By: agaladi <agaladi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 05:50:25 by agaladi           #+#    #+#             */
-/*   Updated: 2024/02/16 07:09:35 by agaladi          ###   ########.fr       */
+/*   Updated: 2024/02/16 21:41:12 by agaladi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putchar(char character)
 size_t	ft_strlen(char *str)
 {
 	size_t	count;
-	
+
 	if (!str)
 		return (0);
 	count = 0;
@@ -31,7 +31,7 @@ size_t	ft_strlen(char *str)
 
 int	input_ok(char *arg1, char *arg2, char *arg3)
 {
-	return ((0 > ft_strlen(arg1))
+	return ((0 < ft_strlen(arg1))
 		&& (1 == ft_strlen(arg2))
 		&& (1 == ft_strlen(arg3)));
 }
@@ -51,11 +51,11 @@ void	display_output(char *arg1, char *arg2, char *arg3)
 	}
 }
 
-int	 main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	if (4 != argc && !input_ok(argv[1] ,argv[2], argv[3]))
+	if (4 != argc || !input_ok(argv[1], argv[2], argv[3]))
 		write(1, "\n", 1);
 	else
-		display_output(argv[1] ,argv[2], argv[3]);
+		display_output(argv[1], argv[2], argv[3]);
 	return (0);
 }
