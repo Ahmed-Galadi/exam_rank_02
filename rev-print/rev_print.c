@@ -6,13 +6,12 @@
 /*   By: agaladi <agaladi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 05:01:20 by agaladi           #+#    #+#             */
-/*   Updated: 2024/02/16 05:45:23 by agaladi          ###   ########.fr       */
+/*   Updated: 2024/02/16 05:45:52 by agaladi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 size_t	ft_strlen(char *str)
 {
