@@ -6,7 +6,7 @@
 /*   By: agaladi <agaladi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 03:19:47 by agaladi           #+#    #+#             */
-/*   Updated: 2024/02/17 04:48:42 by agaladi          ###   ########.fr       */
+/*   Updated: 2024/02/17 20:57:54 by agaladi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	output_len(char *str)
 	count = 1;
 	while (str[count])
 	{
-		if (str[count] >= 'A' && str[count] <= 'Z')	
+		if ((str[count] >= 'A') && (str[count] <= 'Z'))
 			count++;
 		count++;
 	}
@@ -33,9 +33,9 @@ void	ft_putstr(char *str)
 		write(1, str++, 1);
 }
 
-char *camel_to_snake(char *str)
+char	*camel_to_snake(char *str)
 {
-	char 	*output;
+	char	*output;
 	int		i;
 	int		j;
 
@@ -60,15 +60,15 @@ char *camel_to_snake(char *str)
 	return (output);
 }
 
-void display_output(char *str)
+void	display_output(char *str)
 {
 	char	*output;
 
 	if (!str)
-		return;
+		return ;
 	output = camel_to_snake(str);
 	if (!output)
-		return;
+		return ;
 	ft_putstr(output);
 	free(output);
 }
