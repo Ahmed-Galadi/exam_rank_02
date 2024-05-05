@@ -16,6 +16,8 @@ int     del_strlen(char *str)
     return (count);
 }
 
+
+
 int     count_words(char *str)
 {
     int     count;
@@ -36,13 +38,23 @@ int     count_words(char *str)
 
 int     **ft_split(char *str)
 {
-    char **output;
+    char    **output;
+    int     i;
+    int     j;
 
-    output = malloc(count_words(str) + 1);
+    output = malloc((count_words(str) + 1) * sizeof(char *));
+    if (!output)
+        return (NULL);
+    i = 0;
+    while (str[i])
+    {
+       if ()
+    }
+    
 }
 
 int main(void)
 {
-    printf("%d\n", del_strlen("helloo ll"));
+    printf("%s\n", ft_strtrim("helloo ll"));
     return (0);
 }
